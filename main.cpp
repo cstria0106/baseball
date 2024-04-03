@@ -9,8 +9,6 @@ void game(int);
 
 int main() {
   srand(time(NULL));
-  int answer = getRandomNumber(1, 999);
-  std::cout << "Answer is " << std::setfill('0') << std::setw(3) << answer
-            << std::endl;
+  int answer = getRandomNumber();
   game(answer);
 }
