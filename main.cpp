@@ -1,10 +1,8 @@
 #include <cstdlib>
 #include <ctime>
-#include <iomanip>
-#include <iostream>
 
 int enterNumber(const char *);
-int getRandomNumber(int, int);
+int getRandomNumber();
 void game(int);
 
 int main() {
