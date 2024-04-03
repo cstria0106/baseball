@@ -39,19 +39,29 @@ int getBall(int a, int b) {
 }
 
 void game(int number) {
-  int guess;
-  int strike;
-  int ball;
+  int chances = 5;
   while (true) {
-    guess = enterNumber("Enter a guess: ");
-    strike = getStrike(number, guess);
-    ball = getBall(number, guess);
+    std::cout << chances << " chances left." << std::endl;
+
+    int guess = enterNumber("Enter a guess: ");
+    int strike = getStrike(number, guess);
+    int ball = getBall(number, guess);
 
     if (strike == 3) {
       break;
     }
 
     std::cout << "Strikes: " << strike << ", Balls: " << ball << std::endl;
+
+    chances--;
+    if (chances == 0) {
+      break;
+    }
   }
-  std::cout << "You win!" << std::endl;
+
+  if (chances > 0) {
+    std::cout << "You win!" << std::endl;
+  } else {
+    std::cout << "You lose!" << std::endl;
+  }
 }
