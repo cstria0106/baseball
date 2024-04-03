@@ -6,3 +6,8 @@ int enterNumber(const char *message) {
   std::cin >> number;
   return number;
 }
+
+int getRandomNumber(int from, int to) {
+  // inclusive
+  return rand() % (to - from + 1) + from;
+}
