@@ -1,4 +1,5 @@
 #include <iostream>
+
 int enterNumber(const char *);
 
 // 뒤에서 n번째 숫자를 구한다
